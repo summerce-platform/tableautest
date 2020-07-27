@@ -36,7 +36,6 @@
                 }
               
               }
-              document.getElementById("dk").innerHTML="Mkshp Id는 "+mkshpvalue+" 입니다~~!";
 
               var storedName = sessionStorage.getItem('name');
               var passData = storedName;
