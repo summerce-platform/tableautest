@@ -36,58 +36,55 @@
                 }
               
               }
+              document.getElementById("dk").innerHTML="Mkshp Id는 "+mkshpvalue+" 입니다~~!";
 
-              var storedName = sessionStorage.getItem('name');
-              var passData = storedName;
-              let iframe = document.getElementById('qwer-iframe').contentWindow;
-    iframe.postMessage(passData, 'http://mirs.co.kr:8085/tableauiframe.html');
-
-            //   $.ajax({ 
+                  
+              $.ajax({ 
              
-            //     url: 'http://mirs.co.kr:8083/predict', //API의 url
-            //     dataType: 'json', //데이터 타입 지정
-            //     type:'post', //post 방식 사용
-            //     data : {
-            //                 "shopcode" : 1,
-            //                 "id" : mkshpvalue
-            //         }, //post로 api와 통신할 데이터
-            //     success: function(data) { 
+                url: 'http://mirs.co.kr:8083/predict', //API의 url
+                dataType: 'json', //데이터 타입 지정
+                type:'post', //post 방식 사용
+                data : {
+                            "shopcode" : 1,
+                            "id" : mkshpvalue
+                    }, //post로 api와 통신할 데이터
+                success: function(data) { 
                             
-            //         data=data[0];
-            //         console.log(data);
+                    data=data[0];
+                    console.log(data);
                             
-            //         var image1 = new Array();
-            //         var goods1 = new Array();
-            //         var link1 = new Array();
+                    var image1 = new Array();
+                    var goods1 = new Array();
+                    var link1 = new Array();
         
-            //             for (var key in data) {
+                        for (var key in data) {
                         
-            //                     image1.push(data[key].GOODS_IMG_URL);
-            //                     goods1.push(data[key].GOODS_NAME);
-            //                     link1.push(data[key].GOODS_URL);
+                                image1.push(data[key].GOODS_IMG_URL);
+                                goods1.push(data[key].GOODS_NAME);
+                                link1.push(data[key].GOODS_URL);
         
-            //             }
-            //             //set_info는 배열의 1번째~n번째 웹페이지 이미지,상품이름,상품링크를 호출하는 함수이다.
-            //             function setInfo() {
+                        }
+                        //set_info는 배열의 1번째~n번째 웹페이지 이미지,상품이름,상품링크를 호출하는 함수이다.
+                        function setInfo() {
                             
-            //             for (var i = 0; i <= 2; i++) {
-            //                     document.getElementById('title' + i).src = image1[i];
-            //                     document.getElementById('good' + i).innerHTML = goods1[i];
-            //                     document.getElementById('link' + i).href = link1[i];
-            //                     document.getElementById('pid1').innerHTML = mkshpvalue+" 님을 위한 추천 상품";
-            //                 }
+                        for (var i = 0; i <= 2; i++) {
+                                document.getElementById('title' + i).src = image1[i];
+                                document.getElementById('good' + i).innerHTML = goods1[i];
+                                document.getElementById('link' + i).href = link1[i];
+                                document.getElementById('pid1').innerHTML = mkshpvalue+" 님을 위한 추천 상품";
+                            }
         
-            //             }
+                        }
                     
-            //         setInfo();
+                    setInfo();
         
         
-            //         },   ///api와 통신 성공시 실행될 함수
-            //         error: function (request, status, error) {
-            //             console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
-            //         }  // api와 통신 실패시 실행될 함수
+                    },   ///api와 통신 성공시 실행될 함수
+                    error: function (request, status, error) {
+                        console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+                    }  // api와 통신 실패시 실행될 함수
                     
-            // });
+            });
               //여기에 ajax 구문 써야함
 
               // $.ajax({
