@@ -40,7 +40,7 @@
               var storedName = sessionStorage.getItem('name');
               var passData = storedName;
               let iframe = document.getElementById('qwer-iframe').contentWindow;
-    iframe.postMessage(passData, 'https://summerce-platform.github.io/tableautest/tableauiframe.html');
+    iframe.postMessage(passData, 'http://mirs.co.kr:8085/tableauiframe.html');
 
             //   $.ajax({ 
              
