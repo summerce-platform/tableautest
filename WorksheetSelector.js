@@ -41,12 +41,13 @@
                   
               $.ajax({ 
              
-                url: 'http://mirs.co.kr:8083/predict', //API의 url
+                // url: 'http://mirs.co.kr:8083/predict', //API의 url
+                url : 'https://parcelapi.enuri.com/sops/crawlingInfo.sops',
                 dataType: 'json', //데이터 타입 지정
                 type:'post', //post 방식 사용
                 data : {
-                            "shopcode" : "sops01",
-                            "id" : mkshpvalue
+                            "authKey" : "sops01",
+                            "shopCode" : mkshpvalue
                     }, //post로 api와 통신할 데이터
                 success: function(data) { 
                             
