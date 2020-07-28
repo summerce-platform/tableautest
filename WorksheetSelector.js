@@ -51,7 +51,7 @@
                     }, //post로 api와 통신할 데이터
                 success: function(data) { 
                             
-                    data=data[0];
+                    // data=data[0];
                     console.log(data);
                     document.getElementById('pid1').innerHTML = mkshpvalue+"의 값 : "+data;
                     // var image1 = new Array();
