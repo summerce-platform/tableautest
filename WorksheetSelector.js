@@ -42,7 +42,7 @@
               $.ajax({ 
              
                 // url: 'http://mirs.co.kr:8083/predict', //API의 url
-                url : 'https://parcelapi.enuri.com/sops/crawlingInfo.sops',
+                url : 'https://10.10.10.87/sops/crawlingInfo.sops',
                 dataType: 'json', //데이터 타입 지정
                 type:'post', //post 방식 사용
                 data : {
