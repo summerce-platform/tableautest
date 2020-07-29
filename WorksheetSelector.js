@@ -52,8 +52,9 @@
                 success: function(data) { 
                             
                     // data=data[0];
+                    var mydata= JSON.stringify(data);
                     console.log(data);
-                    document.getElementById('pid1').innerHTML = mkshpvalue+"의 값 : "+data;
+                    document.getElementById('pid1').innerHTML = mkshpvalue+"의 값 : "+mydata;
                     // var image1 = new Array();
                     // var goods1 = new Array();
                     // var link1 = new Array();
