@@ -26,7 +26,7 @@
               
               for (var i = 0; i < sumdata._columns.length; i++) {
               
-                if(sumdata._columns[i]._fieldName=="Shop Code"){
+                if(sumdata._columns[i]._fieldName=="Mkshp Id"){
                   console.log(i);
                   var mIndex = i;
                   console.log(mIndex);
@@ -36,7 +36,7 @@
                 }
               
               }
-              document.getElementById("dk").innerHTML="Shop code는 "+mkshpvalue+" 입니다~~!";
+              document.getElementById("dk").innerHTML="Mkshp Id는 "+mkshpvalue+" 입니다~~!";
 
                   
               $.ajax({ 
