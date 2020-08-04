@@ -38,10 +38,10 @@
               }
               document.getElementById("dk").innerHTML="Mkshp Id는 "+mkshpvalue+" 입니다~~!";
 
-                  
+              
               $.ajax({ 
              
-                url: 'http://mirs.co.kr:8083/predict', //API의 url
+                url: 'https://mirs.co.kr:8083/predict', //API의 url
                 dataType: 'json', //데이터 타입 지정
                 type:'post', //post 방식 사용
                 data : {
