@@ -52,6 +52,8 @@
               
               $.ajax(settings).done(function (response) {
                 console.log(response);
+                tgt.innerHTML = "<h4 id='printdata'>출력된 데이터:</h4><p>"+response+"</p>";
+
               });
 
 
@@ -112,7 +114,6 @@
 
 
 
-            tgt.innerHTML = "<h4 id='printdata'>출력된 데이터:</h4><p>"+response+"</p>";
           }
         )}
       
