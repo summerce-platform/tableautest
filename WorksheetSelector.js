@@ -40,7 +40,7 @@
 
               //new api호출
               var settings = {
-                "url": "http://testopt1.bbom.org/list/open_api.html?mode=search&type=coupon",
+                "url": "https://testopt1.bbom.org/list/open_api.html?mode=search&type=coupon",
                 "method": "GET",
                 "timeout": 0,
                 "headers": {
