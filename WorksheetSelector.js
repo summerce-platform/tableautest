@@ -48,7 +48,7 @@ xhr.addEventListener("readystatechange", function() {
   }
 });
 
-xhr.open("POST", "http://testopt1.bbom.org/list/open_api.html?mode=search&type=coupon");
+xhr.open("POST", "https://testopt1.bbom.org/list/open_api.html?mode=search&type=coupon");
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 xhr.setRequestHeader("Shopkey", "6466858989d69d28eaadefd6ffb4d6a5");
 xhr.setRequestHeader("Licensekey", "OGI4YmY2YThhMmFmNjIxNDI5YWMzYzU4ZGU3ZmJhOWI=");
