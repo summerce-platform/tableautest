@@ -5,7 +5,22 @@
   $(document).ready(function () {
     tableau.extensions.initializeAsync({ configure: configure }).then(
       function () {
-
+                        //new api호출
+                        var settings = {
+                          "url": "https://testopt1.bbom.org/list/open_api.html?mode=search&type=coupon",
+                          "method": "POST",
+                          "timeout": 0,
+                          "headers": {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                            "Shopkey": "6466858989d69d28eaadefd6ffb4d6a5",
+                            "Licensekey": "OGI4YmY2YThhMmFmNjIxNDI5YWMzYzU4ZGU3ZmJhOWI="
+                          },
+                        };
+                        
+                        $.ajax(settings).done(function (response) {
+                          console.log(response);
+                        });
+          
         // console.log(tableau.extensions.settings.get("sheetname"));
         if (tableau.extensions.settings.get("sheetname")) {
           // $('#error-log').text(tableau.extensions.settings.get("sheetname"));
@@ -24,35 +39,20 @@
 
               var datacol = sumdata._data[0];
               
-              for (var i = 0; i < sumdata._columns.length; i++) {
+              // for (var i = 0; i < sumdata._columns.length; i++) {
               
-                if(sumdata._columns[i]._fieldName=="Mkshp Id"){
-                  console.log(i);
-                  var mIndex = i;
-                  console.log(mIndex);
-                  console.log(datacol[mIndex]._value);
-                  var mkshpvalue= datacol[mIndex]._value;
+              //   if(sumdata._columns[i]._fieldName=="Mkshp Id"){
+              //     console.log(i);
+              //     var mIndex = i;
+              //     console.log(mIndex);
+              //     console.log(datacol[mIndex]._value);
+              //     var mkshpvalue= datacol[mIndex]._value;
               
-                }
+              //   }
               
-              }
+              // }
               document.getElementById("dk").innerHTML="Mkshp Id는 "+mkshpvalue+" 입니다~~!";
 
-              //new api호출
-              var settings = {
-                "url": "https://testopt1.bbom.org/list/open_api.html?mode=search&type=coupon",
-                "method": "POST",
-                "timeout": 0,
-                "headers": {
-                  "Content-Type": "application/x-www-form-urlencoded",
-                  "Shopkey": "6466858989d69d28eaadefd6ffb4d6a5",
-                  "Licensekey": "OGI4YmY2YThhMmFmNjIxNDI5YWMzYzU4ZGU3ZmJhOWI="
-                },
-              };
-              
-              $.ajax(settings).done(function (response) {
-                console.log(response);
-              });
 
 
             //   $.ajax({ 
